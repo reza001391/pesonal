@@ -1,0 +1,714 @@
+/* ************************* global ************************* */
+@font-face {
+    font-family: "IRANSans";
+    src: url('../fonts/IRANSans.eot');
+    src: url('../fonts/IRANSans.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/IRANSans.woff2') format('woff2'),
+        url('../fonts/IRANSans.woff') format('woff'),
+        url('../fonts/IRANSans.ttf') format('truetype');
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+    font-family: "IRANSans";
+}
+body{
+    background: url(../image/890b196e.png) right top repeat;
+}
+/* ********************* right side and menu **************************** */
+.rightCol {
+    background: url(../image/cf1759b1.png) right top repeat;
+    max-width: 25%;
+    position: fixed;
+    z-index: 1 !important;
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    height: 100vh;
+    transition: 0.4s !important;
+}
+
+/* this is an picture of me */
+.myPicture {
+    max-width: 10rem;
+    max-height: 10rem;
+    border: 0.3rem solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.myPicture:hover {
+    transform: scale(1.1);
+    border-color: #1985a1 !important;
+}
+
+/* this is my name */
+.myName {
+    margin-top: 0.8rem;
+    font-size: 1.6rem;
+    text-align: center;
+    color: #c5c3c6;
+    cursor: context-menu;
+}
+
+/* navigation */
+
+.menu {
+    text-align: right;
+}
+
+.menu ul {
+    display: block;
+}
+
+.menu ul li {
+    cursor: pointer;
+    max-width: 100%;
+    list-style: none;
+    display: block;
+    padding: 0.8rem;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    display: block;
+    padding: 1%;
+    color: #dcdcdd;
+    transition: 0.25s;
+    font-size: 1.2rem;
+}
+
+.menu li a:hover {
+    color: #1985a1;
+    padding-right: 7%;
+}
+
+.arrow {
+    position: relative;
+    right: -0.5rem;
+    top: 0.5vh;
+    opacity: 0;
+    font-size: 1.5rem;
+    color: #1985a1;
+}
+
+.menu li a:hover .arrow {
+    opacity: 100%;
+}
+
+/* social media */
+.socialMedia {
+    position: absolute;
+    bottom: 0;
+    height: auto;
+    cursor: pointer;
+    left: 20%;
+}
+
+.socialMedia img {
+    width: 2rem;
+    margin: 40% 0.4vw;
+    margin-bottom: 5%;
+    filter: grayscale();
+    transition: 0.2s;
+
+}
+
+.socialMedia img:hover {
+    filter: grayscale(0);
+    transform: scale(1.2);
+}
+
+/* **************************** main body ******************************** */
+.mainBody {
+    background: url(../image/890b196e.png) right top repeat;
+    overflow: hidden;
+}
+
+.closeBtn {
+    position: fixed;
+    right: 23%;
+    top: 1%;
+    color: #c5c3c6;
+    font-size: 1.4rem;
+    z-index: 1 !important;
+    cursor: pointer;
+}
+.closingBtn{
+    position: fixed;
+    right: 92%;
+    top: 1%;
+    color: #c5c3c6;
+    font-size: 1.4rem;
+    cursor: pointer;
+    z-index: 1;
+    display: none !important;
+}
+.openBtn {
+    position: fixed;
+    right: 2%;
+    top: 1%;
+    color: #46494c;
+    font-size: 1.4rem;
+    z-index: 1 !important;
+    cursor: pointer;
+    opacity: 75%;
+}
+.openBtn:hover{
+    opacity: 100%;
+}
+
+/* *****about me***** */
+.aboutMeHead {
+    font-size: 2.2rem;
+    text-align: center;
+    color: #1985a1;
+}
+
+.aboutMe {
+    text-align: center;
+    margin: 10% 0 5% 0;
+    color: #46494c;
+    font-size: 1.1rem;
+    cursor: context-menu;
+}
+
+.vector-1 {
+    margin-top: 12%;
+    max-width: 70%;
+}
+
+/* ******skills******* */
+.headSkills {
+    margin-top: 12%;
+    margin-bottom: 7%;
+    text-align: center;
+    font-size: 2rem;
+    color: #1985a1;
+}
+
+.textSkills {
+    font-size: 1rem;
+    color: #46494c;
+    margin-bottom: 1%;
+}
+
+.progress {
+    height: 8%;
+    font-size: 1rem;
+}
+
+/* ****************** sample of my works *********************** */
+.headSample {
+    margin-top: 12%;
+    margin-bottom: 7%;
+    text-align: center;
+    font-size: 2rem;
+    color: #1985a1;
+}
+
+.sampleCard h3 {
+    font-size: 1.7rem;
+}
+
+.sampleCard .btn {
+    width: 60%;
+    height: auto;
+}
+
+.sampleCard {
+    max-width: 80%;
+    text-align: center;
+    box-shadow: 0.1px 0.1px 10px #46494c;
+    transition: 0.3s;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin: auto;
+    margin-bottom: 10%;
+}
+
+.sampleCard:hover {
+    transform: scale(1.1) !important;
+}
+
+/* ****************** footer *********************** */
+.headContact {
+    margin-top: 12%;
+    margin-bottom: 7%;
+    text-align: center;
+    font-size: 2rem;
+    color: #1985a1;
+}
+
+.formContainer {
+    max-width: 80%;
+    margin: auto;
+    height: auto;
+}
+
+.send {
+    color: white;
+    max-width: 80%;
+    width: 80%;
+    display: block;
+    margin: auto;
+    font-size: 1.3rem;
+
+}
+
+.copyright {
+    border-top: 1px solid #46494c;
+    margin-top: 10% !important;
+    text-align: center;
+    width: 100%;
+    padding: 3%
+}
+
+.copyright p {
+    padding: 0;
+    margin: 0;
+    font-size: 1.2rem;
+    color: #46494c;
+}
+
+.copyright a {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    font-size: 1.25rem;
+    color: #1985a1;
+    cursor: pointer;
+}
+
+/* ************************************* media query and responsive ********************************* */
+
+/* ************* 576px ********************* */
+@media screen and (max-width: 576px) {
+    .col-md-4 {
+        -ms-flex: 0 0 100% !important;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+
+    .vector-1 {
+        max-width: 90% !important;
+    }
+
+    .aboutMeHead {
+        font-size: 1.2rem !important;
+    }
+
+    .aboutMe {
+        font-size: 0.9rem !important;
+    }
+
+    .headContact,
+    .headSample,
+    .headSkills {
+        font-size: 1rem !important;
+    }
+
+    .sampleCard h3 {
+        font-size: 1rem !important;
+    }
+
+    .sampleCard {
+        font-size: 0.9rem !important;
+    }
+
+    .sampleCard .btn {
+        width: 90% !important;
+        font-size: 0.8rem !important;
+    }
+
+    .send {
+        max-width: 90% !important;
+        width: 90% !important;
+        font-size: 0.8rem;
+    }
+
+    .copyright p {
+        font-size: 0.85rem !important;
+    }
+
+    .copyright a {
+        font-size: 0.9 !important;
+    }
+
+    .formContainer {
+        max-width: 90% !important;
+    }
+
+    .margMobile {
+        margin-top: 10%;
+    }
+    .myPicture{
+        max-width: 7rem;
+        max-height: 7rem;
+        border: 0.2rem solid rgba(255, 255, 255, 0.2);
+    }
+    .socialMedia img {
+        width: 1.5rem !important;
+    }
+
+    .socialMedia {
+        left: 25% !important;
+    }
+
+}
+
+/* ******************* 700px  max ********************** */
+
+@media screen and (max-width: 700px) {
+    .rightCol {
+        display: none;
+    }
+
+
+    .col-9 {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .closeBtn{
+        display: none !important;
+    }
+    .closingBtn{
+        display: block !important;
+    }
+}
+
+/* ********************* 768px  max ********************** */
+@media screen and (max-width: 768px) {
+    .col-md-4 {
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+        margin: auto;
+    }
+
+    .myPicture {
+        max-width: 4rem;
+        max-height: 4rem;
+        border: 0.1rem solid rgba(255, 255, 255, 0.2);
+    }
+
+    .aboutMeHead {
+        font-size: 1.5rem;
+    }
+
+    .aboutMe,
+    .sampleCard,
+    .menu ul li a {
+        font-size: 0.8rem;
+    }
+
+    .headContact,
+    .headSample,
+    .headSkills {
+        font-size: 1.3rem;
+    }
+
+    .sampleCard h3,
+    .myName {
+        font-size: 0.95rem;
+    }
+
+    .sampleCard {
+        font-size: 0.6rem;
+    }
+
+    .sampleCard .btn {
+        width: 90%;
+        font-size: 0.8rem;
+    }
+
+    .send {
+        max-width: 90% !important;
+        width: 90% !important;
+        font-size: 1rem;
+    }
+
+    .copyright p {
+        font-size: 1rem;
+    }
+
+    .copyright a {
+        font-size: 1.05;
+    }
+
+    .socialMedia img {
+        width: 1.2rem;
+    }
+
+    .socialMedia {
+        left: 20%;
+    }
+
+    .formContainer {
+        max-width: 90% !important;
+    }
+    .closeBtn{
+        right: 22%;
+    }
+
+}
+
+/* ***************************************** 768px min **************************** */
+
+@media screen and (min-width: 768px) {
+    .aboutMeHead {
+        font-size: 1.7rem;
+    }
+
+    .aboutMe,
+    .sampleCard,
+    .menu ul li a {
+        font-size: 1rem;
+    }
+
+    .headContact,
+    .headSample,
+    .headSkills {
+        font-size: 1.5rem;
+    }
+
+    .sampleCard h3,
+    .myName {
+        font-size: 1.05rem;
+    }
+
+    .sampleCard {
+        font-size: 0.8rem;
+    }
+
+    .sampleCard .btn {
+        width: 90%;
+    }
+
+    .send {
+        max-width: 90% !important;
+        width: 90% !important;
+        font-size: 1rem;
+    }
+
+    .copyright p {
+        font-size: 1rem;
+    }
+
+    .copyright a {
+        font-size: 1.05;
+    }
+
+    .socialMedia img {
+        width: 1.3rem;
+    }
+
+    .socialMedia {
+        left: 20%;
+    }
+
+    .formContainer {
+        max-width: 90% !important;
+    }
+
+    .myPicture {
+        max-width: 6rem;
+        max-height: 6rem;
+        border: 0.2rem solid rgba(255, 255, 255, 0.2);
+    }
+    .closeBtn{
+        right: 22%;
+    }
+}
+
+/* **************************** 992px ****************** */
+@media screen and (min-width: 992px) {
+    .aboutMeHead {
+        font-size: 1.9rem;
+    }
+
+    .aboutMe,
+    .sampleCard,
+    .send,
+    .menu ul li a {
+        font-size: 1rem;
+    }
+
+    .headContact,
+    .headSample,
+    .headSkills {
+        font-size: 1.7rem;
+    }
+
+    .sampleCard h3,
+    .myName {
+        font-size: 1.4rem;
+    }
+
+    .myPicture {
+        max-width: 8rem;
+        max-height: 8rem;
+        border: 0.2rem solid rgba(255, 255, 255, 0.2);
+    }
+    .closeBtn{
+        right: 23%;
+    }
+}
+
+/* ******************** 1200px ***************************** */
+@media screen and (min-width: 1200px) {
+    .myPicture {
+        margin-top: 15% !important;
+    }
+
+    .menu {
+        margin-top: 5%;
+    }
+
+    .menu ul {
+        margin-top: 5%;
+    }
+
+    .rightCol {
+        max-width: 16.65%;
+    }
+
+    .col-9 {
+        -ms-flex: 0 0 83.333333%;
+        flex: 0 0 83.333333%;
+        max-width: 83.333333%;
+    }
+
+    .col-3 {
+        -ms-flex: 0 0 16.666667%;
+        flex: 0 0 16.666667%;
+        max-width: 16.666667%;
+    }
+
+    .socialMedia img {
+        width: 1.5rem;
+    }
+
+    .socialMedia {
+        left: 17%;
+    }
+    .closeBtn{
+        right: 15%;
+    }
+}
+
+/* ****************************** 1600px ************************** */
+@media screen and (min-width: 1600px){
+    .myPicture {
+        margin-top: 25% !important;
+    }
+
+    .menu {
+        margin-top: 8%;
+    }
+
+    .menu ul {
+        margin-top: 8%;
+    }
+
+    .rightCol {
+        max-width: 16.65%;
+    }
+
+    .col-9 {
+        -ms-flex: 0 0 83.333333%;
+        flex: 0 0 83.333333%;
+        max-width: 83.333333%;
+    }
+
+    .col-3 {
+        -ms-flex: 0 0 16.666667%;
+        flex: 0 0 16.666667%;
+        max-width: 16.666667%;
+    }
+
+    .socialMedia img {
+        width: 1.5rem;
+    }
+
+    .socialMedia {
+        left: 20%;
+    }
+    .aboutMeHead {
+        font-size: 2.2rem;
+    }
+
+    .aboutMe,
+    .sampleCard,
+    .send,
+    .menu ul li a {
+        font-size: 1.3rem;
+    }
+
+    .headContact,
+    .headSample,
+    .headSkills {
+        font-size: 1.9rem;
+    }
+
+    .sampleCard h3,
+    .myName {
+        font-size: 1.6rem;
+    }
+
+    .myPicture {
+        max-width: 11rem;
+        max-height: 11rem;
+        border: 0.4rem solid rgba(255, 255, 255, 0.2);
+    }
+    .closeBtn{
+        right: 15%;
+    }
+}
+
+/* ***************************************************************** */
+@media screen and (max-width: 700px) {
+    .rightCol {
+        max-width: 100%;
+        width: 100% !important;
+        z-index: 2;
+        display: none;
+    }
+
+    .myName {
+        font-size: 1.5rem;
+    }
+
+    .menu ul li a {
+        font-size: 1.2rem;
+    }
+
+    .menu ul li a{
+        text-align: center;
+    }
+
+    .arrow {
+        display: none !important;
+    }
+
+    .socialMedia {
+        max-width: 90% !important;
+        width: 90%;
+        left: 18%;
+    }
+
+    .socialMedia img {
+        width: 2.2rem;
+        margin: 3% 4%;
+    }
+    .myPicture {
+        max-width: 7rem;
+        max-height: 7rem;
+        border: 0.3rem solid rgba(255, 255, 255, 0.2);
+    }
+}
