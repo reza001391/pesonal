@@ -1,44 +1,52 @@
-const close = document.querySelector(".closeBtn");        //close button
-const open = document.querySelector(".openBtn");          //open button
-const closing = document.querySelector(".closingBtn");            //closing button on mobile size
+const sidebar = document.querySelector(".rightCol");
+const closeBtn = document.querySelector(".closeBtn");
+const openBtn = document.querySelector(".openBtn");
+const closingBtn = document.querySelector(".closingBtn");
 
-close.addEventListener("click", off);       //closing event add
+function closeSidebar() {
+    sidebar.classList.add("closed");
+    closeBtn.style.display = "none";
 
-function off() {                         // closing function   
-
-    // document.querySelector(".rightCol").style.transform = "translateX(350px)";
-    document.querySelector(".rightCol").style.display = "none";
-    close.style.display = "none";
-
-    var col9 = document.querySelectorAll(".col-9");
-    for (x in col9) {
-        col9[x].classList.add("col-12");
-        col9[x].classList.remove("col-9");
-    }
-
+    document.querySelectorAll(".col-9").forEach(el => {
+        el.classList.remove("col-9");
+        el.classList.add("col-12");
+    });
 }
 
-open.addEventListener("click", on);         // opening event add
+function openSidebar() {
+    sidebar.classList.remove("closed");
+    closeBtn.style.display = "block";
 
-function on() {                 //opening function
-
-    // document.querySelector(".rightCol").style.transform = "translateX(0)";
-    document.querySelector(".rightCol").style.display = "flex";
-
-    close.style.display = "block";
-
-    var col9 = document.querySelectorAll(".col-12");
-    for (x in col9) {
-        col9[x].classList.remove("col-12");
-        col9[x].classList.add("col-9");
-    }
-    document.querySelector(".container-fluid").style.zIndex = "1";
+    document.querySelectorAll(".col-12").forEach(el => {
+        el.classList.remove("col-12");
+        el.classList.add("col-9");
+    });
 }
 
-closing.addEventListener("click", off);          // closing mobile event add
-
-function out(){
-    if(window.innerWidth < 700 ){
-        off();
+function autoCloseOnMobile() {
+    if (window.innerWidth < 700) {
+        closeSidebar();
     }
 }
+
+if (closeBtn) closeBtn.addEventListener("click", closeSidebar);
+if (openBtn) openBtn.addEventListener("click", openSidebar);
+if (closingBtn) closingBtn.addEventListener("click", closeSidebar);
+
+
+const swiper = new Swiper(".mySwiper", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    loop: true,
+    pagination: false,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+    },
+    breakpoints: {
+      0: { slidesPerView: 1 },
+      768: { slidesPerView: 2 },
+      992: { slidesPerView: 3 }
+    }
+  });
+  

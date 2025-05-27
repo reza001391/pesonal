@@ -5,12 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>رضا قنبری</title>
+    <link href="image/reza.PNG" rel="icon">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.6/animate.min.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
         integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+
+        <!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 </head>
 
 <body style="direction: rtl;" id="pageTop">
@@ -18,7 +22,7 @@
 
     <nav class="rightCol" data-spy="scroll" data-target=".menu" data-offset="50">
         <i class="fas fa-times closingBtn" id="closingBtn"></i>
-        
+
         <a href="#" class="navbar-brand">
             <!-- my picture -->
             <img src="image/reza.PNG" alt="rezaGhanbari"
@@ -28,28 +32,35 @@
         </a>
         <!------ navigation------->
         <div class="menu mt-5 w-100">
-            <ul class="navbar-nav" onclick="out()" >
+            <ul class="navbar-nav" onclick="out()">
                 <li class="nav-item"><a href="#section1" class="nav-link"><i
-                            class="fas fa-angle-double-left arrow"></i>درباره
+                            class="fas fa-user icon-fixed"></i>درباره
                         من</a></li>
                 <li class="nav-item"><a href="#section2" class="nav-link"><i
-                            class="fas fa-angle-double-left  arrow"></i>مهارت
+                            class="fas fa-code icon-fixed "></i>مهارت
                         ها</a></li>
                 <li class="nav-item"><a href="#section3" class="nav-link"><i
-                            class="fas fa-angle-double-left  arrow"></i>نمونه کار
+                            class="fas fa-folder-open icon-fixed"></i>نمونه کار
                         ها</a></li>
                 <li class="nav-item"><a href="#section4" class="nav-link"><i
-                            class="fas fa-angle-double-left  arrow"></i>ارتباط با
+                            class="fas fa-envelope icon-fixed"></i>ارتباط با
                         من</a></li>
             </ul>
         </div>
         <!-- <i class="fas fa-chevron-circle-right menuBtn-r" id="off"></i> -->
         <!-- social media -->
         <div class="socialMedia">
-            <img src="image/051-gmail.svg" alt="gmail" data-toggle="tooltip" title="جیمیل">
-            <img src="image/051-telegram.svg" alt="telegram" data-toggle="tooltip" title="تلگرام">
-            <img src="image/039-github.svg" alt="github" data-toggle="tooltip" title="گیت هاب">
-            <img src="image/034-instagram.svg" alt="istagram" data-toggle="tooltip" title="اینستاگرام">
+            <a href="mailto:reza001391@gmail.com?subject=test" target="_blank"><img src="image/051-gmail.svg" alt="gmail"
+                    data-toggle="tooltip" title="جیمیل"></a>
+            <a href="https://t.me/Rezaa1596" target="_blank"><img src="image/051-telegram.svg" alt="telegram"
+                    data-toggle="tooltip" title="تلگرام"></a>
+            <a href="https://github.com/reza001391" target="_blank"><img src="image/039-github.svg" alt="github"
+                    data-toggle="tooltip" title="گیت هاب"></a>
+            <a href="https://www.instagram.com/rreza1596/" target="_blank"><img src="image/034-instagram.svg"
+                    alt="istagram" data-toggle="tooltip" title="اینستاگرام"></a>
+
+
+
         </div>
     </nav>
     <div class="container-fluid">
@@ -68,10 +79,11 @@
                 <!-- <i class="fas fa-chevron-circle-left menuBtn-l" id="on"></i> -->
                 <!---------- about me --------->
                 <div class="aboutMe animated fadeInDown" id="section1">
-                    <h3 class="aboutMeHead mySection-content">سلام من رضا قنبری هستم</h3>
-                    <br>
-                    <p>به وب سایت شخصی من خوش اومدید. من رضا قنبری متولد 1375 دانشجوی برق قدرت ، برنامه نویس و طراح...</p>
-                    <p>با یک سال سابقه کار در زمینه front end   و کار با زبان javaScript  به طور حرفه ای . این سایت به منظور آشنایی با رزومه کاری من هست و شما هرچیزی که لازمه در مورد من بدونید رو اینجا پیدا میکنید. نمونه کار های من رو میتونید در این سایت مشاهده کنید.برای دانلود رزومه اینجا کلیک کنید.</p>
+                    <h2 class="aboutMeHead">سلام! من رضا قنبری هستم 👋</h2>
+<p>
+  برنامه‌نویس Front-End با تمرکز بر توسعه رابط‌های کاربری جذاب و تجربه‌محور. عاشق JavaScript و طراحی مدرن هستم، و همیشه در حال یادگیری.
+  در این سایت با نمونه‌کارهای من آشنا می‌شید و می‌تونید رزومه من رو دانلود کنید یا مستقیماً باهام در تماس باشید.
+</p>
                 </div>
 
                 <!-- illustration-1 -->
@@ -119,7 +131,7 @@
                                 style="width: 45%;">45%
                             </div>
                         </div>
-
+                        
                         <!-- left -->
                     </div>
                     <div class="col-sm-6 mx-auto mb-5 margMobile">
@@ -159,41 +171,101 @@
                 <!------------- sample of works -------------->
                 <h3 class="headSample wow animated fadeInRight" id="section3">نمونه کار های من</h3>
 
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="card sampleCard">
-                            <img class="card-img-top" src="./image/1.PNG" alt="Card image">
-                            <div class="card-body">
-                                <h3 class="card-title">نمونه کار</h3>
-                                <p class="card-text">بعدا توضیحاتی در مورد کار و نمونه کار اینجا قرار میگیرد بعدا
-                                    توضیحاتی در مورد کار و نمونه کار اینجا قرار میگیرد</p>
-                                <a href="https://reza001391.github.io/mentoring/" class="btn btn-info">مشاهده</a>
+                <section id="section3">
+                    <h2 class="headSample wow animated fadeInRight">نمونه کارهای من</h2>
+                  
+                    <div class="swiper mySwiper">
+                      <div class="swiper-wrapper">
+                        <!-- کارت نمونه کار ۱ -->
+                        <div class="swiper-slide">
+                          <div class="card sampleCard h-100">
+                            <img src="image/Movie.PNG" class="card-img-top" alt="سایت فیلم">
+                            <div class="card-body d-flex flex-column">
+                              <h3 class="card-title">سایت دانلود فیلم</h3>
+                              <p class="card-text flex-grow-1">نمونه‌ای از سایت‌های دانلود فیلم...</p>
+                              <a href="../movie/index.html" class="btn btn-info mt-auto">مشاهده</a>
                             </div>
+                          </div>
                         </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card sampleCard">
-                            <img class="card-img-top" src="./image/2.PNG" alt="Card image">
-                            <div class="card-body">
-                                <h3 class="card-title">نمونه کار</h3>
-                                <p class="card-text">بعدا توضیحاتی در مورد کار و نمونه کار اینجا قرار میگیرد بعدا
-                                    توضیحاتی در مورد کار و نمونه کار اینجا قرار میگیرد</p>
-                                <a href="https://reza001391.github.io/github-finder/" class="btn btn-info">مشاهده</a>
+                        <!-- کارت نمونه کار ۲ -->
+                         
+                        <div class="swiper-slide">
+                            <div class="card sampleCard h-100">
+                              <img src="image/mentor.PNG" class="card-img-top" alt="سایت فیلم">
+                              <div class="card-body d-flex flex-column">
+                                <h3 class="card-title">سایت دانلود فیلم</h3>
+                                <p class="card-text flex-grow-1">نمونه‌ای از سایت‌های دانلود فیلم...</p>
+                                <a href="../movie/index.html" class="btn btn-info mt-auto">مشاهده</a>
+                              </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card sampleCard">
-                            <img class="card-img-top" src="./image/3.PNG" alt="Card image">
-                            <div class="card-body">
-                                <h3 class="card-title">نمونه کار</h3>
-                                <p class="card-text">بعدا توضیحاتی در مورد کار و نمونه کار اینجا قرار میگیرد بعدا
-                                    توضیحاتی در مورد کار و نمونه کار اینجا قرار میگیرد</p>
-                                <a href="https://reza001391.github.io/Todo-List/" class="btn btn-info">مشاهده</a>
+                          </div>
+                        <!-- کارت نمونه کار ۳ -->
+                        
+                        <div class="swiper-slide">
+                            <div class="card sampleCard h-100">
+                              <img src="image/githubFinder.PNG" class="card-img-top" alt="سایت فیلم">
+                              <div class="card-body d-flex flex-column">
+                                <h3 class="card-title">سایت دانلود فیلم</h3>
+                                <p class="card-text flex-grow-1">نمونه‌ای از سایت‌های دانلود فیلم...</p>
+                                <a href="../movie/index.html" class="btn btn-info mt-auto">مشاهده</a>
+                              </div>
                             </div>
-                        </div>
+                          </div>
+                        <!-- کارت نمونه کار ۴ -->
+                         
+                        <div class="swiper-slide">
+                            <div class="card sampleCard h-100">
+                              <img src="image/toDoList.PNG" class="card-img-top" alt="سایت فیلم">
+                              <div class="card-body d-flex flex-column">
+                                <h3 class="card-title">سایت دانلود فیلم</h3>
+                                <p class="card-text flex-grow-1">نمونه‌ای از سایت‌های دانلود فیلم...</p>
+                                <a href="../movie/index.html" class="btn btn-info mt-auto">مشاهده</a>
+                              </div>
+                            </div>
+                          </div>    
+                        <!-- کارت نمونه کار ۵ -->
+                         
+                        <div class="swiper-slide">
+                            <div class="card sampleCard h-100">
+                              <img src="image/Shop.PNG" class="card-img-top" alt="سایت فیلم">
+                              <div class="card-body d-flex flex-column">
+                                <h3 class="card-title">سایت دانلود فیلم</h3>
+                                <p class="card-text flex-grow-1">نمونه‌ای از سایت‌های دانلود فیلم...</p>
+                                <a href="../movie/index.html" class="btn btn-info mt-auto">مشاهده</a>
+                              </div>
+                            </div>
+                          </div>
+                        <!-- کارت نمونه کار ۶ -->
+                          <div class="swiper-slide">
+                            <div class="card sampleCard h-100">
+                              <img src="image/hosting.PNG" class="card-img-top" alt="سایت فیلم">
+                              <div class="card-body d-flex flex-column">
+                                <h3 class="card-title">سایت دانلود فیلم</h3>
+                                <p class="card-text flex-grow-1">نمونه‌ای از سایت‌های دانلود فیلم...</p>
+                                <a href="../movie/index.html" class="btn btn-info mt-auto">مشاهده</a>
+                              </div>
+                            </div>
+                          </div>
+                        <!-- کارت نمونه کار ۷ -->
+                          <div class="swiper-slide">
+                            <div class="card sampleCard h-100">
+                              <img src="image/portfolio.PNG" class="card-img-top" alt="سایت فیلم">
+                              <div class="card-body d-flex flex-column">
+                                <h3 class="card-title">سایت دانلود فیلم</h3>
+                                <p class="card-text flex-grow-1">نمونه‌ای از سایت‌های دانلود فیلم...</p>
+                                <a href="../movie/index.html" class="btn btn-info mt-auto">مشاهده</a>
+                              </div>
+                            </div>
+                          </div>
+                        <!-- کارت‌های دیگر... (swiper-slide جدید) -->
+                      </div>
+                  
+                      <!-- کنترل‌ها -->
+                      <div class="swiper-button-next"></div>
+                      <div class="swiper-button-prev"></div>
+                      <div class="swiper-pagination"></div>
                     </div>
-                </div>
+                  </section>
 
                 <!-- ----------- footer and contact ------------------ -->
                 <div class="col-3" style="visibility: hidden;"></div>
@@ -201,25 +273,28 @@
                 <h3 class="headContact wow animated fadeInRight" id="section4">ارتباط با من</h3>
 
                 <footer class="col-9 d-block m-auto">
-                    
-                    <form class="formContainer">
+
+                    <form class="formContainer" action="https://formspree.io/f/xvgalaal" method="POST">
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
                             </div>
-                            <input type="text" class="form-control" placeholder="نام">
-                            <input type="text" class="form-control" placeholder="نام خانوادگی">
+                            <input type="text" class="form-control" name="first_name" placeholder="نام"required> 
+                            <input type="text" class="form-control" name="last_name"  placeholder="نام خانوادگی"required>
                         </div>
 
                         <div class="input-group mb-3">
-                            <input type="email" class="form-control" placeholder="پست الکترونیکی">
+                            <input type="email" class="form-control" name="email" placeholder="پست الکترونیکی"required>
                             <div class="input-group-append">
                             </div>
                         </div>
                         <div class="form-group">
-                            <textarea class="form-control" rows="5" id="comment" placeholder="متن پیام"></textarea>
+                            <textarea class="form-control" rows="5" id="comment" name="message" placeholder="متن پیام"required></textarea>
                         </div>
+                        <button type="submit" class="btn bg-info send">ارسال</button>
+
+                         <input type="hidden" name="_redirect" value="https://rezaghanbarii.ir/">
                     </form>
-                    <button type="submit" class="btn bg-info send">ارسال</button>
+                    
 
                     <!-- copyright -->
                     <div class="copyright">
@@ -235,6 +310,12 @@
     </div>
 
 </body>
+
+
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
 <!-- ---------------------------------------- -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
