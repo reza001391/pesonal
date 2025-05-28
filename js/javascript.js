@@ -1,46 +1,53 @@
-
 document.addEventListener("DOMContentLoaded", () => {
- const sidebar = document.querySelector(".rightCol");
-const closeBtn = document.querySelector(".closeBtn");
-const openBtn = document.querySelector(".openBtn");
-const closingBtn = document.querySelector(".closingBtn");
+  const sidebar = document.querySelector(".rightCol");
+  const closeBtn = document.querySelector(".closeBtn");
+  const openBtn = document.querySelector(".openBtn");
+  const closingBtn = document.querySelector(".closingBtn");
+  const navLinks = document.querySelectorAll(".navbar-nav a"); // لینک‌ها
 
-function closeSidebar() {
+  function closeSidebar() {
     sidebar.classList.add("closed");
     closeBtn.style.display = "none";
+  }
 
-    document.querySelectorAll(".col-9").forEach(el => {
-        el.classList.remove("col-9");
-        el.classList.add("col-12");
-    });
-}
-
-function openSidebar() {
+  function openSidebar() {
     sidebar.classList.remove("closed");
     closeBtn.style.display = "block";
+  }
 
-    document.querySelectorAll(".col-12").forEach(el => {
-        el.classList.remove("col-12");
-        el.classList.add("col-9");
-    });
-}
-
-function autoCloseOnMobile() {
+  function autoCloseOnMobile() {
     if (window.innerWidth < 700) {
-        closeSidebar();
+      closeSidebar();
+    } else {
+      sidebar.classList.remove("closed");
     }
-}
+  }
 
-if (closeBtn) closeBtn.addEventListener("click", closeSidebar);
-if (openBtn) openBtn.addEventListener("click", openSidebar);
-if (closingBtn) closingBtn.addEventListener("click", closeSidebar);
+  if (openBtn) openBtn.addEventListener("click", openSidebar);
+  if (closeBtn) closeBtn.addEventListener("click", closeSidebar);
+  if (closingBtn) closingBtn.addEventListener("click", closeSidebar);
 
+  // بستن منو با کلیک روی لینک‌ها
+  navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      if (window.innerWidth < 700) {
+        closeSidebar();
+      }
+    });
+  });
 
-const swiper = new Swiper(".mySwiper", {
+  autoCloseOnMobile();
+  window.addEventListener("resize", autoCloseOnMobile);
+
+  // 🔻 کد Swiper رو بذار همینجا
+  const swiper = new Swiper(".mySwiper", {
     slidesPerView: 3,
     spaceBetween: 30,
     loop: true,
-    pagination: false,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev"
@@ -51,7 +58,4 @@ const swiper = new Swiper(".mySwiper", {
       992: { slidesPerView: 3 }
     }
   });
-  
-  autoCloseOnMobile();
-window.addEventListener("resize", autoCloseOnMobile);
 });
