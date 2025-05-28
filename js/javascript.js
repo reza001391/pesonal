@@ -1,4 +1,6 @@
-const sidebar = document.querySelector(".rightCol");
+
+document.addEventListener("DOMContentLoaded", () => {
+ const sidebar = document.querySelector(".rightCol");
 const closeBtn = document.querySelector(".closeBtn");
 const openBtn = document.querySelector(".openBtn");
 const closingBtn = document.querySelector(".closingBtn");
@@ -50,3 +52,6 @@ const swiper = new Swiper(".mySwiper", {
     }
   });
   
+  autoCloseOnMobile();
+window.addEventListener("resize", autoCloseOnMobile);
+});
